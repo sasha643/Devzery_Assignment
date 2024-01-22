@@ -37,7 +37,6 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    python server.py
 
-
 ## Frontend Setup
 
 1. Navigate to the frontend directory:
@@ -50,6 +49,12 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    npm install
 
+## Usage
 
+1. Open your web browser and navigate to http://localhost:3000.
+2. Use the provided UI for user signup and login. Successful login will redirect to the profile page.
 
+## Notes
 
+- Ensure that your Supabase database has a table named Authenticate with appropriate columns.
+- Update the email verification links in the send_verification_email function as needed.
