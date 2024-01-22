@@ -1,3 +1,4 @@
+![sup](https://github.com/sasha643/Devzery_Assignment/assets/113715335/2c64299f-b736-48c2-b515-d368a0b7e804)
 # User Registration and Authentication:
 ## Flask-Supabase-Authentication
 
