@@ -50,8 +50,6 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    npm install
 
-3. Replace placeholder values:
 
-   - Replace "http://localhost:5000" in src/AuthForm.js with the actual backend URL.
 
 
