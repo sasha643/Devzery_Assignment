@@ -12,9 +12,10 @@ CORS(app)
 
 # Supabase configuration
 url = "https://ayopcbsjgtycygsknkqc.supabase.co"
-key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5b3BjYnNqZ3R5Y3lnc2tua3FjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODY1OTA2NjgsImV4cCI6MjAwMjE2NjY2OH0.2x-rT40eXHuEXb6ZbxNO_S8q867Ofl9RxK7L8Xd7404"
+key = "YOUR_SUPABASE_KEY"
 supabase = create_client(url, key)
 
+# Route for user signup
 @app.route('/signup', methods=['POST'])
 def signup():
     data = request.json
@@ -39,6 +40,7 @@ def signup():
 
     return jsonify({"message": "Verification email sent. Please check your email to complete the signup process."})
 
+# Route for user login
 @app.route('/login', methods=['POST'])
 def login():
     data = request.json
@@ -60,6 +62,7 @@ def login():
     else:
         return jsonify({"message": "Invalid username or password"})
 
+# Function to send verification email
 def send_verification_email(email, verification_token, action):
     msg = EmailMessage()
     
@@ -75,20 +78,21 @@ def send_verification_email(email, verification_token, action):
 
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
         server.starttls()
-        server.login("shubh.bhatt67@gmail.com", "uzopuxetmatrlxcr")  # Replace with your email and password
+        server.login("shubh.bhatt67@gmail.com", "PASSWORD")  # Replace with your email and password
         server.send_message(msg)
 
+# Route to get user profiles
 @app.route('/dashboard', methods=['GET'])
 def get_user_profiles():
     profiles = supabase.table('Authenticate').select('username', 'email').execute()
     return jsonify(profiles['data'])
 
+# Route to manage user profile by user ID
 @app.route('/dashboard/<user_id>', methods=['GET', 'PUT'])
 def manage_user_profile(user_id):
     if request.method == 'GET':
         profile = supabase.table('Authenticate').select('username', 'email').eq('id', user_id).single().execute()
         return jsonify(profile['data'])
-
     elif request.method == 'PUT':
         data = request.json
         supabase.table('Authenticate').update(data).eq('id', user_id).execute()
