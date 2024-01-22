@@ -35,3 +35,5 @@ To run the Flask backend, execute the following commands:
 
 ```bash
 python server.py
+
+## Frontend Setup
