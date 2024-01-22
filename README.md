@@ -94,3 +94,41 @@ If unverified, display a message prompting the user to verify their email.
 
 Consider setting an expiry time for verification tokens to enhance security.
 Invalidate tokens that haven't been used for verification after a specific period.
+
+# Explaination for password reset
+
+- Initiate Password Reset Request:
+
+Implement a feature where users can initiate a password reset request.
+This can be done through a "Forgot Password" link on the login page.
+
+- Generate Secure Token:
+
+When a password reset request is received, generate a secure, unique token.
+The token should have a limited lifespan to enhance security.
+
+- Link Token to User:
+
+Associate the generated token with the user's account in the database.
+This linkage ensures that the token is valid only for the user who initiated the reset request.
+
+- Send Reset Email:
+
+Compose an email containing a link with the generated secure token.
+The link should lead to a password reset page on your application.
+
+- Handle Reset Endpoint:
+
+Create an endpoint (e.g., /reset-password) to handle password reset requests.
+Extract the token from the URL and verify its validity.
+If valid, allow the user to reset their password.
+
+- Token Expiry:
+
+Set an expiry time for password reset tokens to minimize security risks.
+Invalidate tokens that haven't been used for password reset after a specific period.
+
+- Secure Token Storage:
+
+Store the tokens securely, using techniques such as encryption or hashing.
+This prevents exposure of sensitive information even if the token data is somehow accessed.
