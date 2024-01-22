@@ -19,3 +19,8 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    git clone https://github.com/yourusername/Flask-Supabase-Authentication.git
    cd Flask-Supabase-Authentication
+
+2. Install the required Python packages:
+
+   ```bash
+   pip install -r requirements.txt
