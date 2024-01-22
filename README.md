@@ -18,7 +18,7 @@ Before you begin, ensure you have met the following requirements:
 
    ```bash
    git clone https://github.com/sasha643/Devzery_Assignment.git
-   cd Flask-Supabase-Authentication
+   cd /YOUR_LOCAL_PATH_TO_THE_FOLDER/flask-server
 
 2. Install the required Python packages:
 
