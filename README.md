@@ -33,7 +33,7 @@ Before you begin, ensure you have met the following requirements:
 ## Running the Backend
 To run the Flask backend, execute the following commands:
 
-```bash
+    ```bash
 python server.py
 
 ## Frontend Setup
