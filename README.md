@@ -31,9 +31,11 @@ Before you begin, ensure you have met the following requirements:
 - Replace "PASSWORD" in app.py with the password of your Gmail account (This can be generated from your gmail account from apppasswords).
 
 ## Running the Backend
-To run the Flask backend, execute the following commands:
 
-    ```bash
-    python server.py
+- To run the Flask backend, execute the following commands:
+
+   ```bash
+   python server.py
+
 
 ## Frontend Setup
