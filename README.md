@@ -132,3 +132,6 @@ Invalidate tokens that haven't been used for password reset after a specific per
 
 Store the tokens securely, using techniques such as encryption or hashing.
 This prevents exposure of sensitive information even if the token data is somehow accessed.
+
+![ass](https://github.com/sasha643/Devzery_Assignment/assets/113715335/aeb14f13-1f1e-4675-a0a1-766c01110b15)
+
