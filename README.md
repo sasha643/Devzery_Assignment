@@ -40,5 +40,18 @@ Before you begin, ensure you have met the following requirements:
 
 ## Frontend Setup
 
- ```bash
-cd frontend
+1. Navigate to the frontend directory:
+
+   ```bash
+   cd frontend
+
+2. Install the required Node.js packages:
+
+   ```bash
+   npm install
+
+3. Replace placeholder values:
+
+   - Replace "http://localhost:5000" in src/AuthForm.js with the actual backend URL.
+
+
