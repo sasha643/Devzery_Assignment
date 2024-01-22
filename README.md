@@ -29,3 +29,9 @@ Before you begin, ensure you have met the following requirements:
 
 - Replace "YOUR_SUPABASE_KEY" in app.py with your actual Supabase API key.
 - Replace "PASSWORD" in app.py with the password of your Gmail account (This can be generated from your gmail account from apppasswords).
+
+## Running the Backend
+To run the Flask backend, execute the following commands:
+
+```bash
+python app.py
