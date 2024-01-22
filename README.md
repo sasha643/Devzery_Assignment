@@ -34,4 +34,4 @@ Before you begin, ensure you have met the following requirements:
 To run the Flask backend, execute the following commands:
 
 ```bash
-python app.py
+python server.py
