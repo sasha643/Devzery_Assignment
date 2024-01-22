@@ -58,3 +58,39 @@ Before you begin, ensure you have met the following requirements:
 
 - Ensure that your Supabase database has a table named Authenticate with appropriate columns.
 - Update the email verification links in the send_verification_email function as needed.
+
+# Explaination for verifying the email:
+
+- Capture User Information:
+
+Collect user details during the registration process, including username, email, and password.
+
+- Generate Verification Token:
+
+Generate a unique verification token (e.g., a UUID) at the time of registration.
+
+- Store User Data with Token:
+
+Store user data along with the verification token in the Supabase database.
+Add a field to indicate the user's verification status (initially set to false).
+
+- Send Verification Email:
+
+Trigger an email containing a verification link to the user's provided email.
+The link should include the verification token as a query parameter.
+
+- Handle Verification Endpoint:
+
+Create an endpoint (e.g., /verify) to handle verification requests.
+Extract the token from the URL and verify its existence in the database.
+If valid, update the user's record to mark them as verified.
+
+- Allow Login for Verified Users Only:
+
+During the login process, check whether the user is verified before granting access.
+If unverified, display a message prompting the user to verify their email.
+
+- Optional: Token Expiry:
+
+Consider setting an expiry time for verification tokens to enhance security.
+Invalidate tokens that haven't been used for verification after a specific period.
