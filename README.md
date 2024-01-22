@@ -27,5 +27,5 @@ Before you begin, ensure you have met the following requirements:
 
 3. Replace placeholder values:
 
-*Replace "YOUR_SUPABASE_KEY" in app.py with your actual Supabase API key.
-*Replace "PASSWORD" in app.py with the password of your Gmail account.
+- Replace "YOUR_SUPABASE_KEY" in app.py with your actual Supabase API key.
+- Replace "PASSWORD" in app.py with the password of your Gmail account.
